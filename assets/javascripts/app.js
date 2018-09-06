@@ -42,7 +42,6 @@ function displayTopArticles(totalArticles = 3) {
         })
         .then(function (data) {
 
-            //console.log(data);
             let maxArticles = totalArticles;
 
             // If there is less articles, teh max will be total available 
@@ -133,8 +132,6 @@ function displaySearchArticles(searchTerm,beginDate,endDate,totalArticles = 3) {
         })
         .then(function (data) {
 
-            console.log(data.response.docs);
-
             // desired total articles 
             let maxArticles = totalArticles;
 
@@ -194,8 +191,6 @@ function topNewsOnClick() {
 
 function SearchNewsOnClick() {
 
-    console.log('search news on click');
-
     // Search term
     let searchTerm = document.getElementById('srchTerm').value;
     // get the total of articles selected in the screen
@@ -204,11 +199,6 @@ function SearchNewsOnClick() {
     let beginDate = document.getElementById('startYear').value;
     // Endyear 
     let endDate = document.getElementById('endYear').value;
-
-    console.log(searchTerm);
-    console.log(totArticles);
-    console.log(startYear);
-    console.log(endYear);
 
     // clear all articles from screen
     clearArticlesInScreen();
